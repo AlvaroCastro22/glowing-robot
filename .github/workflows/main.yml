@@ -1,15 +1,15 @@
-name: Imprimir secret en dev
+name: Imprimir API_KEY en dev
 
 on:
   push:
     branches:
-      - dev   # Se ejecuta en commits (push) a la rama dev
+      - dev
 
 jobs:
-  print-secret:
+  print-api-key:
     runs-on: ubuntu-latest
     environment:
       name: dev
     steps:
-      - name: Mostrar secret
-        run: echo "XDDDDDDDDDDDDDDDDDDDDDDDDDDD"
+      - name: Mostrar API_KEY
+        run: echo "La API_KEY es: ${{ secrets.API_KEY }}"
