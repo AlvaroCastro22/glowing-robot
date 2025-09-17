@@ -3,7 +3,7 @@ name: Imprimir secret en dev
 on:
   push:
     branches:
-      - dev
+      - dev   # Se ejecuta en commits (push) a la rama dev
 
 jobs:
   print-secret:
@@ -12,4 +12,4 @@ jobs:
       name: dev
     steps:
       - name: Mostrar secret
-        run: echo "hola"
+        run: echo "XDDDDDDDDDDDDDDDDDDDDDDDDDDD"
