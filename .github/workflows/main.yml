@@ -1,0 +1,15 @@
+name: Imprimir secret en dev
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  print-secret:
+    runs-on: ubuntu-latest
+    environment:
+      name: dev
+    steps:
+      - name: Mostrar secret
+        run: echo "hola"
